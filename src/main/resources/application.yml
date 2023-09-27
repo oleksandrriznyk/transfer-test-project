@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payments
+    username: oleksandr
+    password: secure_password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+
+logging:
+  level:
+    root: INFO
+    com.riznyk.transfer: INFO

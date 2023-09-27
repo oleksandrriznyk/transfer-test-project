@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  transfer_db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: payments
+      POSTGRES_USER: oleksandr
+      POSTGRES_PASSWORD: secure_password
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
