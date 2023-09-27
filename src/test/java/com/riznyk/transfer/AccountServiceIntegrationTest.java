@@ -40,7 +40,7 @@ public class AccountServiceIntegrationTest {
     private AccountRepository accountRepository;
 
     @Test
-    public void transferMoneyConcurrentlyShouldThrowException() {
+    public void transferMoneyConcurrentlyWorksCorrectly() {
         // Given
         Account fromAccount = accountRepository.findById(FROM_ACCOUNT_ID).get();
         Account toAccount = accountRepository.findById(TO_ACCOUNT_ID).get();
